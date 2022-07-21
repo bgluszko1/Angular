@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cat } from '../model';
 import { CatsDataService } from '../cats-data.service';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+// import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-cats-detail-view',
