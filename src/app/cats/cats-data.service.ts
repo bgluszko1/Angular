@@ -15,7 +15,8 @@ export class CatsDataService {
       breed: 'maine coon',
       isVaccinated: false,
       picUrl: 'puszek1.jpg',
-      fact: "Lubi jeść"
+      fact: "Lubi jeść",
+      isAdopted: false
     },
     {
       name: 'Mruczek',
@@ -23,7 +24,8 @@ export class CatsDataService {
       breed: 'brytyjczyk',
       isVaccinated: true,
       picUrl: 'mruczek1.jpg',
-      fact: "Jest leniwy"
+      fact: "Jest leniwy",
+      isAdopted: false
     },
     {
       name: 'Kiciek',
@@ -31,7 +33,8 @@ export class CatsDataService {
       breed: 'perski',
       isVaccinated: true,
       picUrl: 'kiciek.jpg',
-      fact: "Kocha zwierzątka"
+      fact: "Kocha zwierzątka",
+      isAdopted: false
     },
     {
       name: 'Kłaczek',
@@ -39,7 +42,8 @@ export class CatsDataService {
       breed: 'brytyjczyk',
       isVaccinated: false,
       picUrl: 'klaczek.jpg',
-      fact: "Jest niezdarny"
+      fact: "Jest niezdarny",
+      isAdopted: false
     },
     {
       name: 'Pimpuś',
@@ -47,7 +51,8 @@ export class CatsDataService {
       breed: 'dachowiec',
       isVaccinated: true,
       picUrl: 'pimpus.jpg',
-      fact: "Łapie myszy"
+      fact: "Łapie myszy",
+      isAdopted: false
     }
   ];
 
