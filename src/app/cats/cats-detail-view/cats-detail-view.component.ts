@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Cat } from '../model';
 import { CatsDataService } from '../cats-data.service';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { NgIf } from '@angular/common';
+import { max } from 'lodash';
 
 @Component({
   selector: 'app-cats-detail-view',
@@ -18,6 +20,7 @@ export class CatsDetailViewComponent implements OnInit {
   adoptionFormActive: boolean;
   showConfirmMsg: boolean;
   private route: ActivatedRouteSnapshot;
+  index: number = 0;
 
   ngOnInit(): void {
     const catName = this.route.params['catName'];
@@ -32,5 +35,17 @@ export class CatsDetailViewComponent implements OnInit {
     this.adoptionFormActive = false;
     this.showConfirmMsg = success;
     this.cat.isAdopted = true;
+  }
+  scrollLeft() {
+    this.index--;
+    if(this.index < 0) {
+      this.index = this.cat.picUrl.length -1;
+    }
+  }
+  scrollRight() {
+    this.index++;
+    if(this.index > this.cat.picUrl.length -1) {
+      this.index = 0;
+    }
   }
 }

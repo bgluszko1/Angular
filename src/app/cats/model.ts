@@ -3,7 +3,7 @@ export interface Cat {
   ageMonths : number;
   breed: string;
   isVaccinated: boolean;
-  picUrl: string;
+  picUrl: string[];
   fact: string;
   isAdopted: boolean;
 }
