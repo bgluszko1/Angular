@@ -1,10 +1,19 @@
 <section>
     <div class="side-by-side">
-        <img src="./assets/cats-pic/{{cat.picUrl}}" alt="">
+        <button (click) ="scrollLeft()" class="scrolls">L</button>
+        <img class="images" src="./assets/cats-pic/{{cat.picUrl[index]}}" alt="">
+        <button (click) = "scrollRight()" class="scrolls">R</button>
         <div class="cols">
             <span class="cats-name">{{cat.name}}</span>
             <span>{{cat.ageMonths}} miesięcy</span>
             <span>{{cat.breed}}</span>
+            <span *ngIf="cat.isVaccinated">
+               zaszczepiony: ✓
+            </span>
+            <span *ngIf="!cat.isVaccinated">
+                zaszczepiony: ✕
+            </span>
+
         </div>
     </div>
 
